@@ -2,10 +2,15 @@
 
 <div>
     <ul>
-        <li *ngFor="let list of lists">{{list.name}}</li>
+        <li *ngFor="let list of toDoLists" >{{list.name}}
+            <button type="button" (click)="OnListSelected(list)">Select</button>
+        </li>
+
     </ul>
 </div>
-<app-list></app-list>
+<app-list [list]="selectedList"></app-list>
 <div>
     <!-- <new-list-form></new-list-form> -->
 </div>
+
+{{toDoLists | json}}
