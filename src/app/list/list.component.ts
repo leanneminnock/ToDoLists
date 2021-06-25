@@ -10,6 +10,7 @@ import { ToDoList } from '../models/todolist';
 export class ListComponent implements OnInit {
   @Input()
   public list: ToDoList | null = null;
+  
   constructor() { }
 
   ngOnInit(): void {
