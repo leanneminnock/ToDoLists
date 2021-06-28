@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component';
 import { CreateListFormComponent } from './create-list-form/create-list-form.component';
 import { ListItemFormComponent } from './list-item-form/list-item-form.component';
+import { SummaryListsComponent } from './summary-lists/summary-lists.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
     CreateListFormComponent,
-    ListItemFormComponent
+    ListItemFormComponent,
+    SummaryListsComponent
   ],
   imports: [
     BrowserModule,

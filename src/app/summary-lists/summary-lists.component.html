@@ -1,0 +1,9 @@
+
+<div>
+    <ul>
+        <li *ngFor="let list of data.toDoLists" >
+            <a [routerLink]="['/list', list.id]">{{list.name}}</a>
+        </li>
+    </ul>
+    <app-create-list-form (OnNewList)="OnListCreated($event)"></app-create-list-form>
+</div>

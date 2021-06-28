@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ToDoList } from '../models/todolist';
 
 @Component({
   selector: 'app-create-list-form',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateListFormComponent implements OnInit {
 
+  public toDoName: string = "";
+
+  @Output()
+  public OnNewList = new EventEmitter<ToDoList>();
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  public CreateToDoList(){
+    this.OnNewList.emit({
+      name: this.toDoName,
+      id: -1,
+      items: []
+    });
+  }
+
 
 }

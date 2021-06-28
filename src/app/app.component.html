@@ -1,16 +1,5 @@
 <h1>Lists of Stuff</h1>
+<router-outlet></router-outlet>
 
-<div>
-    <ul>
-        <li *ngFor="let list of toDoLists" >{{list.name}}
-            <button type="button" (click)="OnListSelected(list)">Select</button>
-        </li>
 
-    </ul>
-</div>
-<app-list [list]="selectedList"></app-list>
-<div>
-    <app-create-list-form></app-create-list-form>
-</div>
-
-{{toDoLists | json}}
+{{data.toDoLists | json}}

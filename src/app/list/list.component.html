@@ -4,5 +4,5 @@
         <li *ngFor="let todo of list.items"><input type="checkbox" [(ngModel)]="todo.completed">{{todo.item}}</li>
     </ul>
 
-    <!-- <list-item-form></list-item-form> -->
+    <app-list-item-form (OnNewItem)="OnItemCreated($event)"></app-list-item-form>
 </div>
