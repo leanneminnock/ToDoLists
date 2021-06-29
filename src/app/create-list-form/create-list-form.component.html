@@ -1,7 +1,10 @@
 <div class="row">
     <!-- <form action=""> -->
-        <textarea [(ngModel)]="toDoName" name="" rows="10" cols="30" placeholder="Enter your to-do list here."></textarea>
-        <button type="submit" (click)="CreateToDoList()">Add Item</button>
-        {{toDoName | json}}
+    <div class="input-group mb-3 ">
+        <input type="text" class="form-control" [(ngModel)]="toDoName" aria-describedby="new-list-button" placeholder="Enter your to-do list here.">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="submit" (click)="CreateToDoList()">Create List</button>
+        </div>
+    </div>
     <!-- </form> -->
 </div>
