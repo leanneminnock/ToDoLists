@@ -24,6 +24,7 @@ export class CreateListFormComponent implements OnInit {
       id: -1,
       items: []
     });
+    this.toDoName = "";
   }
 
 
