@@ -1,5 +1,6 @@
-<div>
-    <div class="col-md-3 text-capitalize">
+<div class="text-capitalize">
+    <h1 *ngIf="list">{{list.name}}</h1>
+    <div class="col-md-3">
         <ul class="list-group list-group-flush" *ngIf="list">
             <li class="list-group-item list-group-item-action" *ngFor="let todo of list.items">
                 <input type="checkbox" [(ngModel)]="todo.completed"> {{todo.item}}
